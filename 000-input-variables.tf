@@ -47,9 +47,9 @@ variable "ports" {
     name = string
     network_id = string
     subnet_id = string
-    admin_state_up = optional(bool)
-    security_group_ids = optional(list(string))
-    ip_address = optional(string)
+    admin_state_up = bool
+    security_group_ids = list(string)
+    ip_address = string
   }))
   description = <<EOF
 The ports list, at least 1 port is required
